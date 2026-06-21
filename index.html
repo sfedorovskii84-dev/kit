@@ -1,17 +1,55 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
-<meta charset="utf-8">
-<title>KIT</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Установка роутинга KIT для HAPP</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f6f9;
+            color: #333;
+            text-align: center;
+        }
+        .container {
+            max-width: 400px;
+            padding: 32px 24px;
+            background: #ffffff;
+            border-radius: 20px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+        }
+        h2 { margin-top: 0; margin-bottom: 12px; font-size: 24px; font-weight: 700; }
+        p { color: #666; font-size: 15px; line-height: 1.5; margin-bottom: 28px; }
+        .btn {
+            display: inline-block;
+            background-color: #007aff;
+            color: #ffffff;
+            padding: 16px 32px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            box-shadow: 0 4px 14px rgba(0,122,255,0.3);
+            transition: all 0.2s ease;
+        }
+        .btn:active { background-color: #0056b3; transform: scale(0.98); }
+    </style>
 </head>
 <body>
-<script>
-window.location.href =
-"happ://routing/onadd/eyJOYW1lIjoiS0lUIi...";
-</script>
 
-<a href="happ://routing/onadd/eyJOYW1lIjoiS0lUIi...">
-Открыть в Happ
-</a>
+<div class="container">
+    <h2>Профиль маршрутизации KIT</h2>
+    <p>Нажмите на кнопку ниже, чтобы автоматически импортировать и активировать настройки в приложении HAPP.</p>
+    
+    <!-- Ваша короткая кликабельная ссылка из конструктора -->
+    <a href="happ://routing/onadd/eyJOYW1lIjoiS0lUIiwiR2xvYmFsUHJveHkiOiJmYWxzZSIsIlJvdXRlT3JkZXIiOiJwcm94eS1kaXJlY3QtYmxvY2siLCJSZW1vdGVETlNUeXBlIjoiRG9VIiwiUmVtb3RlRE5TRG9tYWluIjoiaHR0cHM6Ly9jbG91ZGZsYXJlLWRucy5jb20iLCJSZW1vdGVETlNJUCI6IjEuMS4xLjEiLCJEb21lc3RpY0ROU1R5cGUiOiJEb1UiLCJEb21lc3RpY0ROU0RvbWFpbiI6Imh0dHBzOi8vZG5zLmdvb2dsZSIsIkRvbWVzdGljRE5TSVAiOiI4LjguOC44IiwiR2VvaXB1cmwiOiJodHRwczovL2dpdGh1Yi5jb20vTG95YWxzb2xkaWVyL3YycmF5LXJ1bGVzLWRhdC9yZWxlYXNlcy9sYXRlc3QvZG93bmxvYWQvZ2VvaXAuZGF0IiwiR2Vvc2l0ZXVybCI6Imh0dHBzOi8vZ2l0aHViLmNvbS9Mb3lhbHNvbGRpZXIvdjJyYXktcnVsZXMtZGF0L3JlbGVhc2VzL2xhdGVzdC9kb3dubG9hZC9nZW9zaXRlLmRhdCIsIkxhc3RVcGRhdGVkIjoiMTc4MjAxNDA5MCIsIkRuc0hvc3RzIjp7ImNsb3VkZmxhcmUtZG5zLmNvbSI6IjEuMS4xLjEiLCJkbnMuZ29vZ2xlIjoiOC44LjguOCJ9LCJEaXJlY3RTaXRlcyI6W10sIkRpcmVjdElwIjpbImdlb2lwOnJ1IiwiZ2VvaXA6cHJpdmF0ZSJdLCJQcm94eVNpdGVzIjpbInlvdXR1YmUuY29tIiwiZ29vZ2xldmlkZW8uY29tIiwieXRpbWcuY29tIiwiZ2dwaHQuY29tIiwieW91dHViZS11aS5sLmdvb2dsZS5jb20iLCJ5b3V0dWJlLW5vY29va2llLmNvbSIsIm5oYWNtcDMuY29tLnZuIiwiZ29vZ2xlYXBpcy5jb20iLCJndnQxLmNvbSIsImdvb2dsZS5jb20iLCJnc3RhdGljLmNvbSIsImdvb2dsZXVzZXJjb250ZW50LmNvbSIsImNoYXRncHQuY29tIiwiYXV0aC5vcGVuYWkuY29tIiwib3BlbmFpLmNvbSIsImdlb3NpdGU6d2hhdHNhcHAiLCJnZW9zaXRlOmluc3RhZ3JhbSIsImdlb3NpdGU6ZmFjZWJvb2siLCJnZW9zaXRlOm1ldGEiLCJyb2Jsb3guY29tIiwicmJ4Y2RuLmNvbSIsInJieGluZnJhLmNvbSIsInJieGNkbi5uZXQiLCJyYmx4LmNvIiwiYmxveC5jb20iLCJydXRyYWNrZXIub3JnIiwid3d3LnJ1dHJhY2tlci5vcmciLCJydXRyYWNrZXIuY2MiLCJydXRyYWNrZXIubmV0IiwiZ2Vvc2l0ZTp0ZWxlZ3JhbSJdLCJQcm94eUlwIjpbImdlb2lwOnRlbGVncmFtIl0sIkJsb2NrU2l0ZXMiOltdLCJCbG9ja0lwIjpbXSwiRG9tYWluU3RyYXRlZ3kiOiJBc0lzIiwiRmFrZUROUyI6ImZhbHNlIiwiVXNlQ2h1bmtGaWxlcyI6InRydWUifQ" class="btn">Активировать KIT в HAPP</a>
+</div>
+
 </body>
 </html>
